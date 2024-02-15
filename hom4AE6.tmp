@@ -1,0 +1,110 @@
+[gd_scene load_steps=17 format=3 uid="uid://c806ck12gtw51"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="4_107tm"]
+[ext_resource type="Texture2D" uid="uid://ccjpkal8a2s1u" path="res://flipanim/f_1.png" id="5_23r78"]
+[ext_resource type="Texture2D" uid="uid://dvuax55yvqjqg" path="res://nextanim/pd_1.png" id="6_gg2vn"]
+[ext_resource type="Texture2D" uid="uid://ca15aq3ccn6o5" path="res://flipanim/f_2.png" id="6_nt2f4"]
+[ext_resource type="Texture2D" uid="uid://cuvtm8ah8aceb" path="res://istockphoto-1152524449-612x612.jpg" id="7_gm4a6"]
+[ext_resource type="Texture2D" uid="uid://dw3dcmuh02ku3" path="res://nextanim/pd_2.png" id="7_w1d1l"]
+[ext_resource type="Texture2D" uid="uid://43fvh00vwsqb" path="res://nextanim/pd_3.png" id="8_fie8t"]
+[ext_resource type="Script" path="res://AnimatedSprite2D.gd" id="8_wc682"]
+[ext_resource type="Texture2D" uid="uid://dqek6cp2e8wmr" path="res://nextanim/pd_4.png" id="9_mhmea"]
+[ext_resource type="Script" path="res://Term_Text.gd" id="9_pnby1"]
+[ext_resource type="Texture2D" uid="uid://de7f1so64edk7" path="res://nextanim/pd_5.png" id="10_q7ou8"]
+[ext_resource type="Script" path="res://Def_text.gd" id="10_t5i1g"]
+[ext_resource type="Script" path="res://Button.gd" id="11_6bbuf"]
+[ext_resource type="Texture2D" uid="uid://clod81a8px0hi" path="res://nextanim/pd_6.png" id="11_c77c6"]
+[ext_resource type="Script" path="res://Flip_But.gd" id="14_e1wjv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dfalw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_23r78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nt2f4")
+}],
+"loop": true,
+"name": &"flip",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gg2vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w1d1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fie8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mhmea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q7ou8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c77c6")
+}],
+"loop": true,
+"name": &"next",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_gm4a6")
+}],
+"loop": true,
+"name": &"term",
+"speed": 5.0
+}]
+
+[node name="Home" type="Node2D"]
+
+[node name="Term_Text" type="RichTextLabel" parent="."]
+z_index = 3
+offset_left = 352.0
+offset_top = 200.0
+offset_right = 904.0
+offset_bottom = 424.0
+script = ExtResource("9_pnby1")
+
+[node name="Def_text" type="RichTextLabel" parent="."]
+offset_left = 352.0
+offset_top = 144.0
+offset_right = 904.0
+offset_bottom = 352.0
+script = ExtResource("10_t5i1g")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("4_107tm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(576, 320)
+scale = Vector2(1.2549, 0.941177)
+sprite_frames = SubResource("SpriteFrames_dfalw")
+animation = &"flip"
+script = ExtResource("8_wc682")
+
+[node name="Flip_But" type="Node2D" parent="."]
+z_index = 2
+position = Vector2(632, 312)
+script = ExtResource("14_e1wjv")
+
+[node name="Button" type="Button" parent="Flip_But"]
+offset_left = -280.0
+offset_top = -112.0
+offset_right = 272.0
+offset_bottom = 112.0
+text = "Click jn"
+script = ExtResource("11_6bbuf")
+
+[connection signal="animation_looped" from="Node2D/AnimatedSprite2D" to="Node2D" method="_on_animated_sprite_2d_animation_looped"]
+[connection signal="pressed" from="Flip_But/Button" to="Term_Text" method="_on_button_pressed"]
+[connection signal="pressed" from="Flip_But/Button" to="Def_text" method="_on_button_pressed"]
+[connection signal="pressed" from="Flip_But/Button" to="Node2D" method="_on_button_pressed"]
+[connection signal="pressed" from="Flip_But/Button" to="Node2D/AnimatedSprite2D" method="_on_button_pressed"]
+[connection signal="pressed" from="Flip_But/Button" to="Flip_But" method="_on_button_pressed"]
+[connection signal="pressed" from="Flip_But/Button" to="Flip_But/Button" method="_on_pressed"]

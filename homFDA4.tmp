@@ -1,0 +1,185 @@
+[gd_scene load_steps=25 format=3 uid="uid://c806ck12gtw51"]
+
+[ext_resource type="Script" path="res://Scripts/home.gd" id="1_us6v6"]
+[ext_resource type="Script" path="res://Scripts/Term_Text.gd" id="2_m7efu"]
+[ext_resource type="Script" path="res://Scripts/Def_text.gd" id="3_jf82x"]
+[ext_resource type="Script" path="res://Scripts/Node2D.gd" id="4_rxtiq"]
+[ext_resource type="Texture2D" uid="uid://ccjpkal8a2s1u" path="res://flipanim/f_1.png" id="5_23r78"]
+[ext_resource type="Texture2D" uid="uid://dvuax55yvqjqg" path="res://nextanim/pd_1.png" id="6_gg2vn"]
+[ext_resource type="Texture2D" uid="uid://ca15aq3ccn6o5" path="res://flipanim/f_2.png" id="6_nt2f4"]
+[ext_resource type="Texture2D" uid="uid://cuvtm8ah8aceb" path="res://istockphoto-1152524449-612x612.jpg" id="7_gm4a6"]
+[ext_resource type="Texture2D" uid="uid://dw3dcmuh02ku3" path="res://nextanim/pd_2.png" id="7_w1d1l"]
+[ext_resource type="Texture2D" uid="uid://43fvh00vwsqb" path="res://nextanim/pd_3.png" id="8_fie8t"]
+[ext_resource type="Texture2D" uid="uid://dqek6cp2e8wmr" path="res://nextanim/pd_4.png" id="9_mhmea"]
+[ext_resource type="Texture2D" uid="uid://de7f1so64edk7" path="res://nextanim/pd_5.png" id="10_q7ou8"]
+[ext_resource type="Texture2D" uid="uid://clod81a8px0hi" path="res://nextanim/pd_6.png" id="11_c77c6"]
+[ext_resource type="Script" path="res://Scripts/AnimatedSprite2D.gd" id="14_vvkfy"]
+[ext_resource type="Script" path="res://Scripts/Flip_But.gd" id="15_s4y0e"]
+[ext_resource type="Script" path="res://Scripts/Button.gd" id="16_yqcqb"]
+[ext_resource type="Script" path="res://Scripts/Container.gd" id="17_w3s06"]
+[ext_resource type="Script" path="res://Scripts/Back_Button.gd" id="18_bo3jk"]
+[ext_resource type="Theme" uid="uid://02xo0dgxethl" path="res://themes/new_theme.tres" id="19_hnasl"]
+[ext_resource type="Script" path="res://Scripts/Edit.gd" id="20_3a3tf"]
+[ext_resource type="Texture2D" uid="uid://br0hgr2f87nuv" path="res://assets/star_out.png" id="21_70u2o"]
+[ext_resource type="Texture2D" uid="uid://iqh4kyw202rf" path="res://assets/star.png" id="22_y54e5"]
+[ext_resource type="Script" path="res://TextureButton.gd" id="23_te5ij"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dfalw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nt2f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_23r78")
+}],
+"loop": true,
+"name": &"flip",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gg2vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w1d1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fie8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mhmea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q7ou8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c77c6")
+}],
+"loop": true,
+"name": &"next",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_gm4a6")
+}],
+"loop": true,
+"name": &"term",
+"speed": 5.0
+}]
+
+[node name="Home" type="Node2D"]
+script = ExtResource("1_us6v6")
+
+[node name="Term_Text" type="RichTextLabel" parent="."]
+z_index = 3
+offset_left = 416.0
+offset_top = 224.0
+offset_right = 904.0
+offset_bottom = 424.0
+text = "hello"
+script = ExtResource("2_m7efu")
+
+[node name="Def_text" type="RichTextLabel" parent="."]
+z_index = 3
+offset_left = 416.0
+offset_top = 152.0
+offset_right = 904.0
+offset_bottom = 352.0
+text = "goodbye"
+script = ExtResource("3_jf82x")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("4_rxtiq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(576, 320)
+scale = Vector2(1.2549, 0.941177)
+sprite_frames = SubResource("SpriteFrames_dfalw")
+animation = &"flip"
+script = ExtResource("14_vvkfy")
+
+[node name="Flip_But" type="Node2D" parent="."]
+z_index = -1
+z_as_relative = false
+position = Vector2(632, 312)
+script = ExtResource("15_s4y0e")
+
+[node name="Button" type="Button" parent="Flip_But"]
+offset_left = -280.0
+offset_top = -112.0
+offset_right = 272.0
+offset_bottom = 112.0
+script = ExtResource("16_yqcqb")
+
+[node name="Container" type="Container" parent="."]
+offset_left = 848.0
+offset_top = 360.0
+offset_right = 888.0
+offset_bottom = 400.0
+scale = Vector2(1.27108, 1.39286)
+script = ExtResource("17_w3s06")
+
+[node name="Next" type="Button" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 0.0
+text = "Next"
+
+[node name="Back_Button" type="Container" parent="."]
+offset_left = 352.0
+offset_top = 360.0
+offset_right = 392.0
+offset_bottom = 400.0
+scale = Vector2(1.271, 1.393)
+script = ExtResource("18_bo3jk")
+
+[node name="Back" type="Button" parent="Back_Button"]
+layout_mode = 2
+text = "Back"
+
+[node name="CheckBox" type="CheckBox" parent="."]
+offset_left = 200.0
+offset_top = 136.0
+offset_right = 315.0
+offset_bottom = 167.0
+theme = ExtResource("19_hnasl")
+text = "Randomize"
+
+[node name="Edit" type="Button" parent="."]
+offset_left = 808.0
+offset_top = 456.0
+offset_right = 846.0
+offset_bottom = 487.0
+text = "Edit"
+script = ExtResource("20_3a3tf")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 912.0
+offset_top = 136.0
+offset_right = 1312.0
+offset_bottom = 536.0
+scale = Vector2(0.075, 0.075)
+toggle_mode = true
+texture_normal = ExtResource("21_70u2o")
+texture_pressed = ExtResource("22_y54e5")
+script = ExtResource("23_te5ij")
+
+[connection signal="animation_looped" from="Node2D/AnimatedSprite2D" to="Node2D" method="_on_animated_sprite_2d_animation_looped"]
+[connection signal="pressed" from="Flip_But/Button" to="Term_Text" method="_on_button_pressed"]
+[connection signal="pressed" from="Flip_But/Button" to="Def_text" method="_on_button_pressed"]
+[connection signal="pressed" from="Flip_But/Button" to="Node2D" method="_on_button_pressed"]
+[connection signal="pressed" from="Flip_But/Button" to="Node2D/AnimatedSprite2D" method="_on_button_pressed"]
+[connection signal="pressed" from="Flip_But/Button" to="Flip_But" method="_on_button_pressed"]
+[connection signal="pressed" from="Flip_But/Button" to="Flip_But/Button" method="_on_pressed"]
+[connection signal="pressed" from="Container/Next" to="Node2D" method="_on_next_pressed"]
+[connection signal="pressed" from="Container/Next" to="Node2D/AnimatedSprite2D" method="_on_next_pressed"]
+[connection signal="pressed" from="Container/Next" to="Flip_But" method="_on_next_pressed"]
+[connection signal="pressed" from="Container/Next" to="Container" method="_on_next_pressed"]
+[connection signal="pressed" from="Back_Button/Back" to="Node2D" method="_on_back_pressed"]
+[connection signal="pressed" from="Back_Button/Back" to="Node2D/AnimatedSprite2D" method="_on_back_pressed"]
+[connection signal="pressed" from="Back_Button/Back" to="Flip_But" method="_on_back_pressed"]
+[connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="Edit" to="Edit" method="_on_pressed"]
+[connection signal="toggled" from="TextureButton" to="TextureButton" method="_on_toggled"]
