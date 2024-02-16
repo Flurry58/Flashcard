@@ -10,39 +10,35 @@ func _ready():
 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	var f = _animated_sprite.get_frame()
-	
-	if (not Globals.flipped):
-		if f == 1:
-			_animated_sprite.pause()
-			_animated_sprite.play("term")
-	else:
-		if f == 0:
-			_animated_sprite.pause()
-			
-	
-
 
 func _on_button_pressed():
-	
-	if (Globals.flipped):
-		_animated_sprite.play("flip")
+	if not Globals.dontrepeat:
+		if (Globals.flipped):
+			_animated_sprite.play("term")
+			_animated_sprite.set_frame_and_progress(0, 0)
+			_animated_sprite.pause()		
+		else:
+			_animated_sprite.play_backwards("flip")
+			_animated_sprite.set_frame_and_progress(0, 0)
+			_animated_sprite.pause()
+			
+		Globals.flipped = not Globals.flipped
+		position = Vector2(0,0)
 	else:
-		_animated_sprite.play_backwards("flip")
-
-		
-	position = Vector2(0,0)
+		Globals.dontrepeat = false
 
 
 
 
 func _on_next_pressed():
 	if (Globals.flipped):
-		_animated_sprite.play("flip")
+		_animated_sprite.play("term")
+		_animated_sprite.set_frame_and_progress(0, 0)
+		_animated_sprite.pause()		
 	else:
 		_animated_sprite.play_backwards("flip")
+		_animated_sprite.set_frame_and_progress(0, 0)
+		_animated_sprite.pause()
 
 		
 	position = Vector2(0,0)
@@ -50,9 +46,15 @@ func _on_next_pressed():
 
 func _on_back_pressed():
 	if (Globals.flipped):
-		_animated_sprite.play("flip")
+		_animated_sprite.play("term")
+		_animated_sprite.set_frame_and_progress(0, 0)
+		_animated_sprite.pause()		
 	else:
 		_animated_sprite.play_backwards("flip")
+		_animated_sprite.set_frame_and_progress(0, 0)
+		_animated_sprite.pause()
+
+		
 
 		
 	position = Vector2(0,0)

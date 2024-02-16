@@ -2,6 +2,7 @@ extends Node
 
 var filepath = ""
 var flipped = false
+var dontrepeat = false
 var old_index = 0 #index at when the user chooses to only study stared terms
 var run_change = false
 var start_randomize = false
@@ -20,6 +21,18 @@ var just_staring = false
 var b_press = false
 var n_press = false
 
+
+#gives a toggle behavior to a variable
+class toggle_var:
+	var toggling: bool
+	func _init(tog):
+		toggling = tog
+	
+	func get_val():
+		toggling = not toggling
+		return toggling
+#turn array into string so we can then write it to a json file 
+#this is only for the list of starred terms
 func array_to_string(arr: Array) -> String:
 	var s = ""
 	for i in arr:

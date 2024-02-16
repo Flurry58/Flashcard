@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c806ck12gtw51"]
+[gd_scene load_steps=30 format=3 uid="uid://c806ck12gtw51"]
 
 [ext_resource type="Script" path="res://Scripts/home.gd" id="1_us6v6"]
 [ext_resource type="Script" path="res://Scripts/Term_Text.gd" id="2_m7efu"]
@@ -18,15 +18,16 @@
 [ext_resource type="Script" path="res://Scripts/Button.gd" id="16_yqcqb"]
 [ext_resource type="Script" path="res://Scripts/Container.gd" id="17_w3s06"]
 [ext_resource type="Script" path="res://Scripts/Back_Button.gd" id="18_bo3jk"]
+[ext_resource type="Script" path="res://Scripts/TextureButton.gd" id="19_ctyxb"]
 [ext_resource type="Theme" uid="uid://02xo0dgxethl" path="res://themes/new_theme.tres" id="19_hnasl"]
 [ext_resource type="Script" path="res://Scripts/Edit.gd" id="20_3a3tf"]
 [ext_resource type="Texture2D" uid="uid://br0hgr2f87nuv" path="res://assets/star_out.png" id="21_70u2o"]
 [ext_resource type="Texture2D" uid="uid://iqh4kyw202rf" path="res://assets/star.png" id="22_y54e5"]
-[ext_resource type="Script" path="res://TextureButton.gd" id="23_te5ij"]
-[ext_resource type="Script" path="res://Set_index.gd" id="24_05jwa"]
-[ext_resource type="Script" path="res://Load_file.gd" id="25_8jpv3"]
+[ext_resource type="Script" path="res://Study_Star.gd" id="23_fopil"]
+[ext_resource type="Script" path="res://Scripts/Set_index.gd" id="24_4w2vr"]
+[ext_resource type="Script" path="res://Scripts/Load_file.gd" id="25_eussl"]
 [ext_resource type="Texture2D" uid="uid://qwcq0xof1ebp" path="res://Screenshot 2024-02-14 164813.png" id="26_2ay07"]
-[ext_resource type="Script" path="res://TextEdit.gd" id="27_dvnlq"]
+[ext_resource type="Script" path="res://Scripts/TextEdit.gd" id="27_5l1ej"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dfalw"]
 animations = [{
@@ -99,7 +100,7 @@ script = ExtResource("4_rxtiq")
 position = Vector2(576, 320)
 scale = Vector2(1.2549, 0.941177)
 sprite_frames = SubResource("SpriteFrames_dfalw")
-animation = &"flip"
+animation = &"term"
 script = ExtResource("14_vvkfy")
 
 [node name="Flip_But" type="Node2D" parent="."]
@@ -125,7 +126,7 @@ scale = Vector2(0.075, 0.075)
 toggle_mode = true
 texture_normal = ExtResource("21_70u2o")
 texture_pressed = ExtResource("22_y54e5")
-script = ExtResource("23_te5ij")
+script = ExtResource("19_ctyxb")
 
 [node name="Container" type="Container" parent="."]
 offset_left = 848.0
@@ -168,6 +169,7 @@ offset_right = 336.0
 offset_bottom = 503.0
 theme = ExtResource("19_hnasl")
 text = "Starred Only  "
+script = ExtResource("23_fopil")
 
 [node name="Edit" type="Button" parent="."]
 visible = false
@@ -183,7 +185,7 @@ offset_left = 376.0
 offset_top = 432.0
 offset_right = 856.0
 offset_bottom = 472.0
-script = ExtResource("24_05jwa")
+script = ExtResource("24_4w2vr")
 
 [node name="Load_file" type="Button" parent="."]
 offset_left = 192.0
@@ -191,7 +193,7 @@ offset_top = 136.0
 offset_right = 312.0
 offset_bottom = 168.0
 text = "LOAD"
-script = ExtResource("25_8jpv3")
+script = ExtResource("25_eussl")
 
 [node name="FileDialog" type="FileDialog" parent="Load_file"]
 title = "Open a File"
@@ -218,8 +220,11 @@ offset_top = 360.0
 offset_right = 896.0
 offset_bottom = 416.0
 placeholder_text = "Practice Writing it out if wrong"
-script = ExtResource("27_dvnlq")
+script = ExtResource("27_5l1ej")
 
+[connection signal="term_press" from="." to="Set_index" method="_on_home_term_press"]
+[connection signal="term_press" from="." to="TextEdit" method="_on_home_term_press"]
+[connection signal="uncheck_star" from="Term_Text" to="Study_Star" method="_on_term_text_uncheck_star"]
 [connection signal="animation_looped" from="Node2D/AnimatedSprite2D" to="Node2D" method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="pressed" from="Flip_But/Button" to="Term_Text" method="_on_button_pressed"]
 [connection signal="pressed" from="Flip_But/Button" to="Def_text" method="_on_button_pressed"]

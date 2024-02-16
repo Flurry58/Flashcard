@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://bupvg6q3o1fxu"]
 
-[ext_resource type="Script" path="res://Terms.gd" id="1_6sk50"]
 [ext_resource type="Theme" uid="uid://bmmtsvfeox7bd" path="res://themes/edit_flashcards.tres" id="1_wa2kj"]
-[ext_resource type="Script" path="res://edit_flashcards.gd" id="1_wxgos"]
-[ext_resource type="Script" path="res://Definitions.gd" id="2_a2rjw"]
+[ext_resource type="Script" path="res://Scripts/edit_flashcards.gd" id="1_yd7pe"]
 [ext_resource type="Script" path="res://Scripts/Study_terms.gd" id="2_bicyd"]
-[ext_resource type="Script" path="res://new_set.gd" id="3_i27n6"]
+[ext_resource type="Script" path="res://Scripts/Definitions.gd" id="2_nhnfl"]
+[ext_resource type="Script" path="res://Scripts/Terms.gd" id="3_luuf5"]
+[ext_resource type="Script" path="res://Scripts/new_set.gd" id="6_o068f"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_wxgos")
+script = ExtResource("1_yd7pe")
 
 [node name="Definitions" type="ItemList" parent="."]
 offset_left = 576.0
@@ -16,14 +16,14 @@ offset_top = 32.0
 offset_right = 1088.0
 offset_bottom = 608.0
 max_columns = 0
-script = ExtResource("2_a2rjw")
+script = ExtResource("2_nhnfl")
 
 [node name="Terms" type="ItemList" parent="."]
 offset_left = 64.0
 offset_top = 32.0
 offset_right = 576.0
 offset_bottom = 608.0
-script = ExtResource("1_6sk50")
+script = ExtResource("3_luuf5")
 
 [node name="Study_terms" type="Button" parent="."]
 offset_left = 64.0
@@ -40,7 +40,7 @@ offset_right = 1088.0
 offset_bottom = 344.0
 theme = ExtResource("1_wa2kj")
 text = "Add New"
-script = ExtResource("3_i27n6")
+script = ExtResource("6_o068f")
 
 [node name="Add_def" type="TextEdit" parent="."]
 offset_left = 576.0

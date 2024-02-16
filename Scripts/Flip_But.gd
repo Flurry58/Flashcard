@@ -15,9 +15,6 @@ func _process(delta):
 		_on_next_pressed()
 
 
-func _on_button_pressed():
-	Globals.flipped = not Globals.flipped
-
 
 func _on_next_pressed():
 	Globals.curindex = abs(Globals.curindex + 1) % (len(Globals.indlist))
@@ -25,8 +22,7 @@ func _on_next_pressed():
 		Globals.curindex = abs(Globals.curindex + 1) % (len(Globals.indlist))
 	
 	Globals.n_press = true
-	if Globals.flipped:
-		Globals.flipped = not Globals.flipped
+	Globals.flipped = false
 
 
 func _on_back_pressed():
@@ -35,6 +31,6 @@ func _on_back_pressed():
 	Globals.curindex = abs(Globals.curindex - 1) % (len(Globals.indlist))
 	if Globals.indlist[Globals.curindex] == "*$%#%%":
 		Globals.curindex = abs(Globals.curindex - 1) % (len(Globals.indlist))
-	if Globals.flipped:
-		Globals.flipped = not Globals.flipped
+
+	Globals.flipped = false
 	
