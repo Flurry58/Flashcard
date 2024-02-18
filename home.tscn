@@ -26,8 +26,8 @@
 [ext_resource type="Script" path="res://Study_Star.gd" id="23_fopil"]
 [ext_resource type="Script" path="res://Scripts/Set_index.gd" id="24_4w2vr"]
 [ext_resource type="Script" path="res://Scripts/Load_file.gd" id="25_eussl"]
-[ext_resource type="Texture2D" uid="uid://qwcq0xof1ebp" path="res://Screenshot 2024-02-14 164813.png" id="26_2ay07"]
 [ext_resource type="Script" path="res://Scripts/TextEdit.gd" id="27_5l1ej"]
+[ext_resource type="Texture2D" uid="uid://qwcq0xof1ebp" path="res://assets/Screenshot 2024-02-14 164813.png" id="27_uq4yo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dfalw"]
 animations = [{
@@ -211,7 +211,7 @@ offset_top = -80.0
 offset_right = 1363.0
 offset_bottom = 105.0
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("26_2ay07")
+texture = ExtResource("27_uq4yo")
 stretch_mode = 4
 
 [node name="TextEdit" type="TextEdit" parent="."]
@@ -219,7 +219,7 @@ offset_left = 352.0
 offset_top = 360.0
 offset_right = 896.0
 offset_bottom = 416.0
-placeholder_text = "Practice Writing it out if wrong"
+placeholder_text = "Write Here"
 script = ExtResource("27_5l1ej")
 
 [connection signal="term_press" from="." to="Set_index" method="_on_home_term_press"]

@@ -9,4 +9,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func _on_home_term_press():
-	set_value_no_signal(abs(Globals.curindex + 1) % (len(Globals.indlist)))
+	var val = 0
+	if Globals.curindex > len(Globals.indlist):
+		val = abs(Globals.curindex + 1) % (len(Globals.indlist))
+	else:
+		val = Globals.curindex + 1
+	set_value_no_signal(val)

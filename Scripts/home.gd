@@ -1,7 +1,7 @@
 extends Node2D
 
 
-signal term_press
+signal term_press(n)
 #set this node to be the only node to handle all sending signals about global values
 var writing = false
 # Called when the node enters the scene tree for the first time.
@@ -15,26 +15,31 @@ func put_new_term(text):
 func put_new_def(text):
 	$Def_text.put_new(text)
 	
+#when unset is true then reset starred and put the study mode back to studying all the cards
+func exit_starred():
+	$Set_index.visible = true
+	Globals.normal_set()
+	Globals.unset = false
+	
+#if either the next button or back button is pressed emit a signal to notify other nodes of this action
+#this is used to mainly manage animations and modify the position of certain nodes
+func emit_signal_term():
+	term_press.emit()
+	Globals.n_press = false
+	Globals.b_press = false
+	
+#
+# change flashcard text, this is rarely used and only used mainly when a new json set is
+# uploaded.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	set_process_input(true) 
-	if Globals.run_change:
-		$Set_index.max_value = len(Globals.indlist)-1
-		var curterm = Globals.indlist[Globals.curindex]
-		$Term_Text.put_new(curterm, true)
-		$Def_text.put_new(Globals.flashcards[curterm], true)
-		Globals.run_change = false
-	#if the starred list is empty do not activate starred as there are no starred terms to go over yet
-	if Globals.unset:
-		$Set_index.visible = true
-		Globals.normal_set()
-		Globals.unset = false
-	if Globals.n_press or Globals.b_press:
-		term_press.emit()
-		print("clear")
-		Globals.n_press = false
-		Globals.b_press = false
+func force_change():
+	$Set_index.max_value = len(Globals.indlist)-1
+	var curterm = Globals.indlist[Globals.curindex]
+	$Term_Text.put_new(curterm, true)
+	$Def_text.put_new(Globals.flashcards[curterm], true)
+	Globals.run_change = false
+#
+
 	
 	
 	#handles keybinding inputs and plays animations accordingly, have to play animations BEFORE we call 
@@ -98,7 +103,10 @@ func _on_study_star_toggled(button_pressed):
 func _on_set_index_drag_ended(value_changed):
 	var val = int($Set_index.get_value())
 	if Globals.indlist[val] != "*$%#%%":
-		Globals.curindex = val
+		if Globals.curindex > len(Globals.indlist):
+			Globals.curindex = abs(Globals.curindex) % (len(Globals.indlist))
+		else:
+			Globals.curindex = val
 	else:
 		Globals.curindex = abs(Globals.curindex + 1) % (len(Globals.indlist))
 #
@@ -114,3 +122,14 @@ func _on_text_edit_mouse_entered():
 func _on_text_edit_mouse_exited():
 	writing = false
 	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	set_process_input(true) 
+	if Globals.run_change:
+		force_change()
+	#if the starred list is empty do not activate starred as there are no starred terms to go over yet
+	if Globals.unset:
+		exit_starred()
+		
+	if Globals.n_press or Globals.b_press:
+		emit_signal_term(Globals.n_press)
