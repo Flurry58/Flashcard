@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:home.tscn
 [gd_scene load_steps=30 format=3 uid="uid://c806ck12gtw51"]
 
 [ext_resource type="Script" path="res://Scripts/home.gd" id="1_us6v6"]
@@ -28,6 +29,40 @@
 [ext_resource type="Script" path="res://Scripts/Load_file.gd" id="25_eussl"]
 [ext_resource type="Script" path="res://Scripts/TextEdit.gd" id="27_5l1ej"]
 [ext_resource type="Texture2D" uid="uid://qwcq0xof1ebp" path="res://assets/Screenshot 2024-02-14 164813.png" id="27_uq4yo"]
+=======
+[gd_scene load_steps=34 format=3 uid="uid://c806ck12gtw51"]
+
+[ext_resource type="Script" path="res://Scripts/home.gd" id="1_esjfk"]
+[ext_resource type="Texture2D" uid="uid://br0hgr2f87nuv" path="res://assets/star_out.png" id="2_ewcuq"]
+[ext_resource type="Texture2D" uid="uid://iqh4kyw202rf" path="res://assets/star.png" id="3_bhpxn"]
+[ext_resource type="Script" path="res://Scripts/TextureButton.gd" id="4_3uf00"]
+[ext_resource type="Script" path="res://Scripts/Term_Text.gd" id="5_c5uak"]
+[ext_resource type="Script" path="res://Scripts/Def_text.gd" id="6_ffwy1"]
+[ext_resource type="Script" path="res://Scripts/Node2D.gd" id="7_gs6qx"]
+[ext_resource type="Texture2D" uid="uid://ca15aq3ccn6o5" path="res://flipanim/f_2.png" id="8_v65nh"]
+[ext_resource type="Texture2D" uid="uid://ccjpkal8a2s1u" path="res://flipanim/f_1.png" id="9_5v2b5"]
+[ext_resource type="Texture2D" uid="uid://dvuax55yvqjqg" path="res://nextanim/pd_1.png" id="10_0ro72"]
+[ext_resource type="Texture2D" uid="uid://dw3dcmuh02ku3" path="res://nextanim/pd_2.png" id="11_a0x8w"]
+[ext_resource type="Texture2D" uid="uid://43fvh00vwsqb" path="res://nextanim/pd_3.png" id="12_juedf"]
+[ext_resource type="Texture2D" uid="uid://dqek6cp2e8wmr" path="res://nextanim/pd_4.png" id="13_p101x"]
+[ext_resource type="Texture2D" uid="uid://de7f1so64edk7" path="res://nextanim/pd_5.png" id="14_ygsog"]
+[ext_resource type="Texture2D" uid="uid://clod81a8px0hi" path="res://nextanim/pd_6.png" id="15_7rl1m"]
+[ext_resource type="Texture2D" uid="uid://cuvtm8ah8aceb" path="res://assets/istockphoto-1152524449-612x612.jpg" id="16_hk2m5"]
+[ext_resource type="Script" path="res://Scripts/AnimatedSprite2D.gd" id="17_ln54c"]
+[ext_resource type="Script" path="res://Scripts/Flip_But.gd" id="18_qcfh1"]
+[ext_resource type="Script" path="res://Scripts/Button.gd" id="19_q7ng4"]
+[ext_resource type="Script" path="res://Scripts/Container.gd" id="20_lee6c"]
+[ext_resource type="Script" path="res://Scripts/Back_Button.gd" id="21_rebba"]
+[ext_resource type="Script" path="res://Scripts/Edit.gd" id="22_lmfga"]
+[ext_resource type="Script" path="res://Scripts/Set_index.gd" id="23_u2fnl"]
+[ext_resource type="Script" path="res://Scripts/TextEdit.gd" id="26_73u3n"]
+[ext_resource type="Script" path="res://Scripts/Bottom_Row.gd" id="27_stvwi"]
+[ext_resource type="Theme" uid="uid://02xo0dgxethl" path="res://themes/new_theme.tres" id="28_k6gbx"]
+[ext_resource type="Script" path="res://Scenes/Menu.gd" id="28_wh54v"]
+[ext_resource type="Texture2D" uid="uid://di4jbf73foh34" path="res://assets/background.png" id="29_0lbl8"]
+[ext_resource type="Script" path="res://Scripts/Study_Star.gd" id="29_qr1go"]
+[ext_resource type="Script" path="res://Scenes/Load_Options.gd" id="30_0fq2g"]
+>>>>>>> Stashed changes:Scenes/home.tscn
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dfalw"]
 animations = [{
@@ -74,8 +109,382 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ac206"]
+texture = ExtResource("29_0lbl8")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+11:16/0 = 0
+12:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+10:17/0 = 0
+11:17/0 = 0
+12:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+6:18/0 = 0
+7:18/0 = 0
+8:18/0 = 0
+9:18/0 = 0
+10:18/0 = 0
+11:18/0 = 0
+12:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:19/0 = 0
+7:19/0 = 0
+8:19/0 = 0
+9:19/0 = 0
+10:19/0 = 0
+11:19/0 = 0
+12:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+5:20/0 = 0
+6:20/0 = 0
+7:20/0 = 0
+8:20/0 = 0
+9:20/0 = 0
+10:20/0 = 0
+11:20/0 = 0
+12:20/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+5:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+8:21/0 = 0
+9:21/0 = 0
+10:21/0 = 0
+11:21/0 = 0
+12:21/0 = 0
+0:22/0 = 0
+1:22/0 = 0
+2:22/0 = 0
+3:22/0 = 0
+4:22/0 = 0
+5:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+8:22/0 = 0
+9:22/0 = 0
+10:22/0 = 0
+11:22/0 = 0
+12:22/0 = 0
+0:23/0 = 0
+1:23/0 = 0
+2:23/0 = 0
+3:23/0 = 0
+4:23/0 = 0
+5:23/0 = 0
+6:23/0 = 0
+7:23/0 = 0
+8:23/0 = 0
+9:23/0 = 0
+10:23/0 = 0
+11:23/0 = 0
+12:23/0 = 0
+0:24/0 = 0
+1:24/0 = 0
+2:24/0 = 0
+3:24/0 = 0
+4:24/0 = 0
+5:24/0 = 0
+6:24/0 = 0
+7:24/0 = 0
+8:24/0 = 0
+9:24/0 = 0
+10:24/0 = 0
+11:24/0 = 0
+12:24/0 = 0
+0:25/0 = 0
+1:25/0 = 0
+2:25/0 = 0
+3:25/0 = 0
+4:25/0 = 0
+5:25/0 = 0
+6:25/0 = 0
+7:25/0 = 0
+8:25/0 = 0
+9:25/0 = 0
+10:25/0 = 0
+11:25/0 = 0
+12:25/0 = 0
+0:26/0 = 0
+1:26/0 = 0
+2:26/0 = 0
+3:26/0 = 0
+4:26/0 = 0
+5:26/0 = 0
+6:26/0 = 0
+7:26/0 = 0
+8:26/0 = 0
+9:26/0 = 0
+10:26/0 = 0
+11:26/0 = 0
+12:26/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_71fq0"]
+sources/0 = SubResource("TileSetAtlasSource_ac206")
+
 [node name="Home" type="Node2D"]
+<<<<<<< Updated upstream:home.tscn
 script = ExtResource("1_us6v6")
+=======
+z_index = 2
+script = ExtResource("1_esjfk")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+z_index = 1
+offset_left = 912.0
+offset_top = 136.0
+offset_right = 1424.0
+offset_bottom = 648.0
+scale = Vector2(0.075, 0.075)
+toggle_mode = true
+texture_normal = ExtResource("2_ewcuq")
+texture_pressed = ExtResource("3_bhpxn")
+script = ExtResource("4_3uf00")
+>>>>>>> Stashed changes:Scenes/home.tscn
 
 [node name="Term_Text" type="RichTextLabel" parent="."]
 z_index = 3
@@ -187,6 +596,7 @@ offset_right = 856.0
 offset_bottom = 472.0
 script = ExtResource("24_4w2vr")
 
+<<<<<<< Updated upstream:home.tscn
 [node name="Load_file" type="Button" parent="."]
 offset_left = 192.0
 offset_top = 136.0
@@ -214,6 +624,8 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("27_uq4yo")
 stretch_mode = 4
 
+=======
+>>>>>>> Stashed changes:Scenes/home.tscn
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_left = 352.0
 offset_top = 360.0
@@ -222,6 +634,92 @@ offset_bottom = 416.0
 placeholder_text = "Write Here"
 script = ExtResource("27_5l1ej")
 
+<<<<<<< Updated upstream:home.tscn
+=======
+[node name="Bottom_Row" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("27_stvwi")
+
+[node name="CheckBox" type="CheckBox" parent="Bottom_Row"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 472.0
+offset_right = 480.0
+offset_bottom = 503.0
+theme = ExtResource("28_k6gbx")
+text = "Randomize"
+
+[node name="Study_Star" type="CheckBox" parent="Bottom_Row"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 472.0
+offset_right = 336.0
+offset_bottom = 503.0
+theme = ExtResource("28_k6gbx")
+text = "Starred Only  "
+script = ExtResource("29_qr1go")
+
+[node name="Error" type="Label" parent="Bottom_Row"]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 472.0
+offset_right = 928.0
+offset_bottom = 498.0
+theme = ExtResource("28_k6gbx")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+tile_set = SubResource("TileSet_71fq0")
+format = 2
+layer_0/tile_data = PackedInt32Array(262155, 65536, 4, 327691, 65536, 4, 393227, 65536, 4, 458763, 65536, 4, 524299, 65536, 4, 589835, 65536, 4, 655371, 65536, 4, 262156, 65536, 4, 327692, 65536, 4, 393228, 65536, 4, 458765, 65536, 4, 458766, 65536, 4, 458767, 65536, 4, 393231, 65536, 4, 393230, 65536, 4, 393229, 65536, 4, 458764, 65536, 4, 327693, 65536, 4, 262157, 65536, 4, 262158, 65536, 4, 327694, 65536, 4, 327695, 65536, 4, 720907, 65536, 4, 786443, 65536, 4, 851979, 65536, 4, 917515, 65536, 4, 983051, 65536, 4, 1048587, 65536, 4, 1114123, 65536, 4, 1179659, 65536, 4, 1245195, 65536, 4, 1310731, 65536, 4, 1376267, 65536, 4, 1441803, 65536, 4, 1507339, 65536, 4, 1572875, 65536, 4, 1638411, 65536, 4, 1703947, 65536, 4, 1769483, 65536, 4, 1835019, 65536, 4, 1900555, 65536, 4, 1966091, 65536, 4, 2031627, 65536, 4, 2097163, 65536, 4, 2031628, 65536, 4, 2097164, 65536, 4, 2031629, 65536, 4, 2097165, 65536, 4, 2031630, 65536, 4, 2097166, 65536, 4, 2031631, 65536, 4, 2097167, 65536, 4, 2031632, 65536, 4, 2097168, 65536, 4, 2031633, 65536, 4, 2097169, 65536, 4, 2031634, 65536, 4, 2097170, 65536, 4, 2031635, 65536, 4, 2097171, 65536, 4, 2031636, 65536, 4, 2097172, 65536, 4, 2031637, 65536, 4, 2097173, 65536, 4, 2031638, 65536, 4, 2097174, 65536, 4, 2031639, 65536, 4, 2097175, 65536, 4, 2031640, 65536, 4, 2097176, 65536, 4, 2031641, 65536, 4, 2097177, 65536, 4, 2031642, 65536, 4, 2097178, 65536, 4, 2031643, 65536, 4, 2097179, 65536, 4, 2031644, 65536, 4, 2097180, 65536, 4, 2031645, 65536, 4, 2097181, 65536, 4, 2031646, 65536, 4, 2097182, 65536, 4, 2031647, 65536, 4, 2097183, 65536, 4, 2031648, 65536, 4, 2097184, 65536, 4, 2031649, 65536, 4, 2097185, 65536, 4, 2031650, 65536, 4, 2097186, 65536, 4, 2031651, 65536, 4, 2097187, 65536, 4, 2031652, 65536, 4, 2097188, 65536, 4, 2031653, 65536, 4, 2097189, 65536, 4, 2031654, 65536, 4, 2097190, 65536, 4, 2031655, 65536, 4, 2097191, 65536, 4, 2031656, 65536, 4, 2097192, 65536, 4, 2031657, 65536, 4, 2097193, 65536, 4, 2031658, 65536, 4, 2097194, 65536, 4, 2031659, 65536, 4, 2097195, 65536, 4, 2031660, 65536, 4, 2097196, 65536, 4, 2031661, 65536, 4, 2097197, 65536, 4, 2031662, 65536, 4, 2097198, 65536, 4, 2031663, 65536, 4, 2097199, 65536, 4, 2031664, 65536, 4, 2097200, 65536, 4, 2031665, 65536, 4, 2097201, 65536, 4, 2031666, 65536, 4, 2097202, 65536, 4, 2031667, 65536, 4, 2097203, 65536, 4, 2031668, 65536, 4, 2097204, 65536, 4, 2031669, 65536, 4, 2097205, 65536, 4, 2031670, 65536, 4, 2097206, 65536, 4, 2031671, 65536, 4, 2097207, 65536, 4, 2031672, 65536, 4, 2097208, 65536, 4, 2031673, 65536, 4, 2097209, 65536, 4, 2031674, 65536, 4, 2097210, 65536, 4, 2031675, 65536, 4, 2097211, 65536, 4, 524348, 65536, 4, 589884, 65536, 4, 655420, 65536, 4, 720956, 65536, 4, 786492, 65536, 4, 852028, 65536, 4, 917564, 65536, 4, 983100, 65536, 4, 1048636, 65536, 4, 1114172, 65536, 4, 1179708, 65536, 4, 1245244, 65536, 4, 1310780, 65536, 4, 1376316, 65536, 4, 1441852, 65536, 4, 1507388, 65536, 4, 1572924, 65536, 4, 1638460, 65536, 4, 1703996, 65536, 4, 1769532, 65536, 4, 1835068, 65536, 4, 1900604, 65536, 4, 1966140, 65536, 4, 2031676, 65536, 4, 2097212, 65536, 4, 262159, 65536, 4, 262160, 65536, 4, 327696, 65536, 4, 393232, 65536, 4, 458768, 65536, 4, 262161, 65536, 4, 327697, 65536, 4, 393233, 65536, 4, 458769, 65536, 4, 262162, 65536, 4, 327698, 65536, 4, 393234, 65536, 4, 458770, 65536, 4, 262163, 65536, 4, 327699, 65536, 4, 393235, 65536, 4, 458771, 65536, 4, 262164, 65536, 4, 327700, 65536, 4, 393236, 65536, 4, 458772, 65536, 4, 262165, 65536, 4, 327701, 65536, 4, 393237, 65536, 4, 458773, 65536, 4, 262166, 65536, 4, 327702, 65536, 4, 393238, 65536, 4, 458774, 65536, 4, 262167, 65536, 4, 327703, 65536, 4, 393239, 65536, 4, 458775, 65536, 4, 262168, 65536, 4, 327704, 65536, 4, 393240, 65536, 4, 458776, 65536, 4, 262169, 65536, 4, 327705, 65536, 4, 393241, 65536, 4, 458777, 65536, 4, 262170, 65536, 4, 327706, 65536, 4, 393242, 65536, 4, 458778, 65536, 4, 262171, 65536, 4, 327707, 65536, 4, 393243, 65536, 4, 458779, 65536, 4, 262172, 65536, 4, 327708, 65536, 4, 393244, 65536, 4, 458780, 65536, 4, 262173, 65536, 4, 327709, 65536, 4, 393245, 65536, 4, 458781, 65536, 4, 262174, 65536, 4, 327710, 65536, 4, 393246, 65536, 4, 458782, 65536, 4, 262175, 65536, 4, 327711, 65536, 4, 393247, 65536, 4, 458783, 65536, 4, 262176, 65536, 4, 327712, 65536, 4, 393248, 65536, 4, 458784, 65536, 4, 262177, 65536, 4, 327713, 65536, 4, 393249, 65536, 4, 458785, 65536, 4, 262178, 65536, 4, 327714, 65536, 4, 393250, 65536, 4, 458786, 65536, 4, 262179, 65536, 4, 327715, 65536, 4, 393251, 65536, 4, 458787, 65536, 4, 262180, 65536, 4, 327716, 65536, 4, 393252, 65536, 4, 458788, 65536, 4, 262181, 65536, 4, 327717, 65536, 4, 393253, 65536, 4, 458789, 65536, 4, 262182, 65536, 4, 327718, 65536, 4, 393254, 65536, 4, 458790, 65536, 4, 262183, 65536, 4, 327719, 65536, 4, 393255, 65536, 4, 458791, 65536, 4, 262184, 65536, 4, 327720, 65536, 4, 393256, 65536, 4, 458792, 65536, 4, 262185, 65536, 4, 327721, 65536, 4, 393257, 65536, 4, 458793, 65536, 4, 262186, 65536, 4, 327722, 65536, 4, 393258, 65536, 4, 458794, 65536, 4, 262187, 65536, 4, 327723, 65536, 4, 393259, 65536, 4, 458795, 65536, 4, 262188, 65536, 4, 327724, 65536, 4, 393260, 65536, 4, 458796, 65536, 4, 262189, 65536, 4, 327725, 65536, 4, 393261, 65536, 4, 458797, 65536, 4, 262190, 65536, 4, 327726, 65536, 4, 393262, 65536, 4, 458798, 65536, 4, 262191, 65536, 4, 327727, 65536, 4, 393263, 65536, 4, 458799, 65536, 4, 262192, 65536, 4, 327728, 65536, 4, 393264, 65536, 4, 458800, 65536, 4, 262193, 65536, 4, 327729, 65536, 4, 393265, 65536, 4, 458801, 65536, 4, 262194, 65536, 4, 327730, 65536, 4, 393266, 65536, 4, 458802, 65536, 4, 262195, 65536, 4, 327731, 65536, 4, 393267, 65536, 4, 458803, 65536, 4, 262196, 65536, 4, 327732, 65536, 4, 393268, 65536, 4, 458804, 65536, 4, 262197, 65536, 4, 327733, 65536, 4, 393269, 65536, 4, 458805, 65536, 4, 262198, 65536, 4, 327734, 65536, 4, 393270, 65536, 4, 458806, 65536, 4, 262199, 65536, 4, 327735, 65536, 4, 393271, 65536, 4, 458807, 65536, 4, 262200, 65536, 4, 327736, 65536, 4, 393272, 65536, 4, 458808, 65536, 4, 262201, 65536, 4, 327737, 65536, 4, 393273, 65536, 4, 458809, 65536, 4, 262202, 65536, 4, 327738, 65536, 4, 393274, 65536, 4, 458810, 65536, 4, 262203, 65536, 4, 327739, 65536, 4, 393275, 65536, 4, 458811, 65536, 4, 262204, 65536, 4, 327740, 65536, 4, 393276, 65536, 4, 458812, 65536, 4, 262154, 65536, 4, 327690, 65536, 4, 393226, 65536, 4, 458762, 65536, 4, 524298, 65536, 4, 589834, 65536, 4, 655370, 65536, 4, 720906, 65536, 4, 786442, 65536, 4, 851978, 65536, 4, 917514, 65536, 4, 983050, 65536, 4, 1048586, 65536, 4, 1114122, 65536, 4, 1179658, 65536, 4, 1245194, 65536, 4, 1310730, 65536, 4, 1376266, 65536, 4, 1441802, 65536, 4, 1507338, 65536, 4, 1572874, 65536, 4, 1638410, 65536, 4, 1703946, 65536, 4, 1769482, 65536, 4, 1835018, 65536, 4, 1900554, 65536, 4, 1966090, 65536, 4, 2031626, 65536, 4, 2097162, 65536, 4, 524347, 65536, 4, 589883, 65536, 4, 655419, 65536, 4, 720955, 65536, 4, 786491, 65536, 4, 852027, 65536, 4, 917563, 65536, 4, 983099, 65536, 4, 1048635, 65536, 4, 1114171, 65536, 4, 1179707, 65536, 4, 1245243, 65536, 4, 1310779, 65536, 4, 1376315, 65536, 4, 1441851, 65536, 4, 1507387, 65536, 4, 1572923, 65536, 4, 1638459, 65536, 4, 1703995, 65536, 4, 1769531, 65536, 4, 1835067, 65536, 4, 1900603, 65536, 4, 1966139, 65536, 4, 262205, 65536, 4, 327741, 65536, 4, 393277, 65536, 4, 458813, 65536, 4, 524349, 65536, 4, 589885, 65536, 4, 655421, 65536, 4, 720957, 65536, 4, 786493, 65536, 4, 852029, 65536, 4, 917565, 65536, 4, 983101, 65536, 4, 1048637, 65536, 4, 1114173, 65536, 4, 1179709, 65536, 4, 1245245, 65536, 4, 1310781, 65536, 4, 1376317, 65536, 4, 1441853, 65536, 4, 1507389, 65536, 4, 1572925, 65536, 4, 1638461, 65536, 4, 1703997, 65536, 4, 1769533, 65536, 4, 1835069, 65536, 4, 1900605, 65536, 4, 1966141, 65536, 4, 2031677, 65536, 4, 2097213, 65536, 4)
+
+[node name="Load_Options" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 192.0
+offset_top = 88.0
+offset_right = 232.0
+offset_bottom = 128.0
+script = ExtResource("30_0fq2g")
+
+[node name="FileDialog" type="FileDialog" parent="Load_Options"]
+title = "Open a File"
+initial_position = 4
+size = Vector2i(333, 500)
+min_size = Vector2i(200, 300)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+
+[node name="Menu" type="Panel" parent="Load_Options"]
+offset_right = 48.0
+offset_bottom = 40.0
+script = ExtResource("28_wh54v")
+
+[node name="MenuBarMenuButtons" type="HBoxContainer" parent="Load_Options/Menu"]
+offset_right = 64.0
+offset_bottom = 40.0
+
+[node name="Menu1" type="MenuButton" parent="Load_Options/Menu/MenuBarMenuButtons"]
+layout_mode = 2
+text = "Load"
+switch_on_hover = true
+item_count = 3
+popup/item_0/text = "Json"
+popup/item_0/id = 4471
+popup/item_1/text = "CSV"
+popup/item_1/id = 2
+popup/item_2/text = "TSV"
+popup/item_2/id = 1
+
+[connection signal="set_error" from="." to="Bottom_Row" method="_on_home_set_error"]
+[connection signal="set_vis" from="." to="Bottom_Row" method="_on_home_set_vis"]
+>>>>>>> Stashed changes:Scenes/home.tscn
 [connection signal="term_press" from="." to="Set_index" method="_on_home_term_press"]
 [connection signal="term_press" from="." to="TextEdit" method="_on_home_term_press"]
 [connection signal="uncheck_star" from="Term_Text" to="Study_Star" method="_on_term_text_uncheck_star"]
@@ -243,6 +741,7 @@ script = ExtResource("27_5l1ej")
 [connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]
 [connection signal="toggled" from="Study_Star" to="." method="_on_study_star_toggled"]
 [connection signal="pressed" from="Edit" to="Edit" method="_on_pressed"]
+<<<<<<< Updated upstream:home.tscn
 [connection signal="drag_ended" from="Set_index" to="." method="_on_set_index_drag_ended"]
 [connection signal="pressed" from="Load_file" to="Load_file" method="_on_pressed"]
 [connection signal="canceled" from="Load_file/FileDialog" to="Load_file" method="_on_file_dialog_canceled"]
@@ -251,3 +750,14 @@ script = ExtResource("27_5l1ej")
 [connection signal="focus_entered" from="TextEdit" to="." method="_on_text_edit_focus_entered"]
 [connection signal="mouse_entered" from="TextEdit" to="." method="_on_text_edit_mouse_entered"]
 [connection signal="mouse_exited" from="TextEdit" to="." method="_on_text_edit_mouse_exited"]
+=======
+[connection signal="drag_ended" from="Set_index" to="Set_index" method="_on_drag_ended"]
+[connection signal="focus_entered" from="TextEdit" to="." method="_on_text_edit_focus_entered"]
+[connection signal="mouse_entered" from="TextEdit" to="." method="_on_text_edit_mouse_entered"]
+[connection signal="mouse_exited" from="TextEdit" to="." method="_on_text_edit_mouse_exited"]
+[connection signal="toggled" from="Bottom_Row/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="toggled" from="Bottom_Row/Study_Star" to="Set_index" method="_on_study_star_toggled"]
+[connection signal="canceled" from="Load_Options/FileDialog" to="Load_Options" method="_on_file_dialog_canceled"]
+[connection signal="file_selected" from="Load_Options/FileDialog" to="Load_Options" method="_on_file_dialog_file_selected"]
+[connection signal="item_pressed" from="Load_Options/Menu" to="Load_Options" method="_on_menu_item_pressed"]
+>>>>>>> Stashed changes:Scenes/home.tscn
