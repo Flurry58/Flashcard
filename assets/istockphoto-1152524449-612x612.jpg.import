@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuvtm8ah8aceb"
-path="res://.godot/imported/istockphoto-1152524449-612x612.jpg-395b90b8c12d58498cad69597b45e53d.ctex"
+path="res://.godot/imported/istockphoto-1152524449-612x612.jpg-8535b44becc93ce607e925ea0afbd6e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://istockphoto-1152524449-612x612.jpg"
-dest_files=["res://.godot/imported/istockphoto-1152524449-612x612.jpg-395b90b8c12d58498cad69597b45e53d.ctex"]
+source_file="res://assets/istockphoto-1152524449-612x612.jpg"
+dest_files=["res://.godot/imported/istockphoto-1152524449-612x612.jpg-8535b44becc93ce607e925ea0afbd6e7.ctex"]
 
 [params]
 

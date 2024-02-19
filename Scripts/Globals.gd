@@ -1,6 +1,6 @@
 extends Node
 
-var filepath = ""
+var filepath = "res://assets/file.json"
 var flipped = false
 var dontrepeat = false
 var old_index = 0 #index at when the user chooses to only study stared terms
@@ -17,6 +17,10 @@ var curindex = 0
 var starred_list = []
 var incode_list = []
 var just_staring = false
+
+#signal to change the visiblity of the set index slider if user has no stared terms but removed
+#all the terms while in the study star only checkbox
+var change_vis_signal = false
 
 var b_press = false
 var n_press = false
@@ -57,10 +61,6 @@ func shuf(arr):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var has_star = false
-	var temppath = "res://assets/recent.json"
-	var jsontext = FileAccess.get_file_as_string(temppath)
-	var recflash = JSON.parse_string(jsontext)
-	filepath = recflash["file"]
 	var json_as_text = FileAccess.get_file_as_string(filepath)
 	flashcards = JSON.parse_string(json_as_text)
 	var i = 0
@@ -106,11 +106,7 @@ func check_empty_star():
 	else:
 		return false
 		
-func set_recent(path):
-	var plist = {"file": path}
-	var file = FileAccess.open("res://assets/recent.json", FileAccess.WRITE)
-	file.store_line(JSON.stringify(plist))
-	file.close()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if curindex == len(indlist):
@@ -130,7 +126,6 @@ func _process(delta):
 			#print(indlist)
 			
 	if star_only and not check_empty_star():
-		
 		old_index = curindex
 		currently_stared = true #this is used to check if the checkbox is toggled
 		#we will use this to then reset the back to the normal list when the checkbox is unclicked
@@ -151,13 +146,12 @@ func _process(delta):
 	elif check_empty_star() and star_only:
 		star_only = false
 		unset = true
-	#	print("Reset")
+		print("No starred terms in dataset available to study")
 		normal_set()
 
 #when you unclick the study starred reset the database then put index to the last index the user was at
 #before they clicked the study starred button
 func normal_set():
+	change_vis_signal = true
 	currently_stared = false
-	_ready()
-	curindex = old_index
 		
