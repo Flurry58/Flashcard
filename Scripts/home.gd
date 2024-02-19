@@ -32,7 +32,7 @@ func _process(delta):
 		Globals.unset = false
 	if Globals.n_press or Globals.b_press:
 		term_press.emit()
-		print("clear")
+		#print("clear")
 		Globals.n_press = false
 		Globals.b_press = false
 	
